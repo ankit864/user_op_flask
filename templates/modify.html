@@ -1,0 +1,41 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+<br><br>
+<form method="post">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" name="user" id="user" placeholder="Enter username">
+    <select style="width: 300px" onchange="selectedOption(event)" name="selectedopt" id="selectedopt">
+      <option disabled selected >change</option>
+      <option>password</option>
+      <option>shell</option>
+      <option>homedir</option>
+      <option>sudo_access</option>
+    </select>
+    <div class="text__field">
+      <label for="modify"></label>
+      <input type="text" class="form-control" name="modify" id="modify" placeholder="Enter value (for revoking sudo access type yes)" required>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script>
+  function selectedOption(evt) {
+    var selectedOption = evt.currentTarget.value;
+    debugger
+  }
+  </script>
+</body>
+</html>
